@@ -21,6 +21,7 @@
     "react/jsx-indent-props": [1, 2],
     "react/prop-types": 1,
     "react/jsx-uses-vars": [2],
+    "react/require-default-props": 1,
     "object-curly-newline": 1,
     "no-console": 1,
     "global-require": 0,

@@ -9,15 +9,15 @@ const initialState = {
   error: null,
 };
 
-const reposReducer = (state = initialState, { type, payload }) => {
+const orgsReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-  case types.REPOS_GET_REQUEST:
+  case types.ORGS_GET_REQUEST:
     return {
       ...state,
       loading: true,
       error: null,
     };
-  case types.REPOS_GET_SUCCESS:
+  case types.ORGS_GET_SUCCESS:
     return {
       ...state,
       loading: false,
@@ -25,7 +25,7 @@ const reposReducer = (state = initialState, { type, payload }) => {
       [mainCollectionName]: payload,
       order: Object.keys(payload),
     };
-  case types.REPOS_GET_FAILURE:
+  case types.ORGS_GET_FAILURE:
     return {
       ...state,
       loading: false,
@@ -36,4 +36,4 @@ const reposReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export default reposReducer;
+export default orgsReducer;

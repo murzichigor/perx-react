@@ -6,11 +6,11 @@ export const fetchReposRequest = userName => ({
 });
 
 export const fetchReposSuccess = repos => ({
-  type: types.REPOS_GET_REQUEST,
+  type: types.REPOS_GET_SUCCESS,
   payload: repos,
 });
 
 export const fetchReposFailure = error => ({
-  type: types.REPOS_GET_REQUEST,
+  type: types.REPOS_GET_FAILURE,
   payload: error,
 });

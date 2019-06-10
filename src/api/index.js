@@ -1,7 +1,4 @@
-import fetchRepos from './repos';
 import fetchOrgs from './orgs';
+import fetchRepos from './repos';
 
-export {
-  fetchRepos,
-  fetchOrgs,
-};
+export { fetchRepos, fetchOrgs };
