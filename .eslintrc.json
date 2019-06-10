@@ -1,0 +1,43 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "commonjs": true
+  },
+  "extends": ["airbnb", "plugin:flowtype/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["react", "flowtype"],
+  "rules": {
+    "indent": [1, 2],
+    "import/no-named-as-default": [1, 4],
+    "react/jsx-indent": [1, 2],
+    "react/jsx-indent-props": [1, 2],
+    "react/prop-types": 1,
+    "react/jsx-uses-vars": [2],
+    "object-curly-newline": 1,
+    "no-console": 1,
+    "global-require": 0,
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "depth": 3
+      }
+    ],
+    "jsx-a11y/label-has-for": "off"
+  }
+}
