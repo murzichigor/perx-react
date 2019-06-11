@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'semantic-ui-react';
+import InitialItem from '../InitialItem';
 import ReposItem from '../ReposItem';
 
 const ReposList = ({ repos = [] }) => (
@@ -20,6 +21,10 @@ const ReposList = ({ repos = [] }) => (
         language={repo.language}
       />
     ))}
+
+    {repos.length === 0
+      && <InitialItem />
+    }
   </List>
 );
 
