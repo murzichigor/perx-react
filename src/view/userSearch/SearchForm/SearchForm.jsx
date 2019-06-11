@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
-import { Button, Form, Input } from 'semantic-ui-react';
+import { compose } from 'redux';
+import { Button, Input, Message } from 'semantic-ui-react';
 import { combinedLoading } from '../../../state/selectors';
-import { withLoadingState } from '../../hocs';
+import { withErrorMessage, withLoadingState } from '../../hocs';
 import UserSearchContext from '../UserSearchContext';
 
 const fieldName = 'user';
 
-const SearchForm = ({ loading = false }) => {
+const SearchForm = ({ loading = false, errorMessage = null }) => {
   const { setUserName } = useContext(UserSearchContext);
 
   const handleSubmit = (event) => {
@@ -18,7 +19,7 @@ const SearchForm = ({ loading = false }) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <Input
         icon="github"
         iconPosition="left"
@@ -29,13 +30,20 @@ const SearchForm = ({ loading = false }) => {
         action={<Button type="submit">search</Button>}
         loading={loading}
         aria-label="Search by username"
+        error={!!errorMessage}
       />
-    </Form>
+
+      {errorMessage && <Message warning header={errorMessage} />}
+    </form>
   );
 };
 
 SearchForm.propTypes = {
   loading: PropTypes.bool,
+  errorMessage: PropTypes.string,
 };
 
-export default withLoadingState(combinedLoading)(SearchForm);
+export default compose(
+  withErrorMessage,
+  withLoadingState(combinedLoading),
+)(SearchForm);

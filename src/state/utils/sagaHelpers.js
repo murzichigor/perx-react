@@ -1,4 +1,4 @@
-import { keyBy } from 'lodash/fp';
+import { keyBy, get } from 'lodash/fp';
 import parseLinkHeader from 'parse-link-header';
 import { call, put } from 'redux-saga/effects';
 
@@ -23,6 +23,12 @@ export const createFetchResorsesSaga = (apiHandler, { success, failure }) =>
 
       yield put(success(orgs, { nextPage: hasNextPage }));
     } catch (error) {
-      yield put(failure(error.message));
+      let errorMessage = error.message;
+
+      if (error.response) {
+        errorMessage = get('response.data.message', error);
+      }
+
+      yield put(failure(errorMessage));
     }
   };

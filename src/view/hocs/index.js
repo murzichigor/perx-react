@@ -1,6 +1,7 @@
 import withLoadingState from './withLoadingState';
+import withErrorMessage from './withErrorMessage';
 
 export {
-  // eslint-disable-next-line import/prefer-default-export
   withLoadingState,
+  withErrorMessage,
 };
