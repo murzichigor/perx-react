@@ -1,34 +1,61 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { List } from 'semantic-ui-react';
+import { reposSelectors } from '../../../state/repos';
+import { withLoadingState } from '../../hocs';
+import { useFirstRendered } from '../../hooks';
+import PlaceholderItem from '../PlaceholderItem';
 import InitialItem from '../InitialItem';
 import ReposItem from '../ReposItem';
 
-const ReposList = ({ repos = [] }) => (
-  <List
-    divided
-    relaxed
-  >
-    {repos.map(repo => (
-      <ReposItem
-        key={repo.id}
-        url={repo.html_url}
-        name={repo.name}
-        description={repo.description}
-        stars={repo.stargazers_count}
-        watchers={repo.forks_count}
-        forks={repo.watchers_count}
-        language={repo.language}
-      />
-    ))}
+const ReposList = ({ repos = [], loading = false }) => {
+  const displayedOnce = useFirstRendered(repos, loading);
 
-    {repos.length === 0
-      && <InitialItem />
-    }
-  </List>
-);
+  return (
+    <List
+      divided
+      relaxed
+    >
+      {!displayedOnce && !loading && <InitialItem />}
+
+      {loading && (
+        <>
+          <List.Item>
+            <PlaceholderItem />
+          </List.Item>
+          <List.Item>
+            <PlaceholderItem />
+          </List.Item>
+        </>
+      )}
+
+      {!loading && repos.map(repo => (
+        <ReposItem
+          key={repo.id}
+          url={repo.html_url}
+          name={repo.name}
+          description={repo.description}
+          stars={repo.stargazers_count}
+          watchers={repo.forks_count}
+          forks={repo.watchers_count}
+          language={repo.language}
+        />
+      ))}
+
+      {!loading && displayedOnce && repos.length === 0 && (
+        <List.Item>
+          <List.Content>
+            <List.Description>User doesn't have any repository</List.Description>
+          </List.Content>
+        </List.Item>
+      )}
+
+    </List>
+  );
+};
 
 ReposList.propTypes = {
+  loading: PropTypes.bool,
   repos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -42,4 +69,4 @@ ReposList.propTypes = {
   ).isRequired,
 };
 
-export default ReposList;
+export default withLoadingState(reposSelectors.isLoading)(ReposList);

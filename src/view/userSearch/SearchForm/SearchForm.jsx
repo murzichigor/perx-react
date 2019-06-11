@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { Button, Form, Input } from 'semantic-ui-react';
+import { combinedLoading } from '../../../state/selectors';
 import { withLoadingState } from '../../hocs';
 import UserSearchContext from '../UserSearchContext';
 
@@ -36,4 +37,4 @@ SearchForm.propTypes = {
   loading: PropTypes.bool,
 };
 
-export default withLoadingState(SearchForm);
+export default withLoadingState(combinedLoading)(SearchForm);

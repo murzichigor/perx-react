@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
-import { combinedLoading } from '../../state/selectors';
 
-const withLoadingState = (WrappedComponent) => {
+const withLoadingState = selector => (WrappedComponent) => {
   const mapStateToProps = state => ({
-    loading: combinedLoading(state),
+    loading: selector(state),
   });
 
   return connect(mapStateToProps)(WrappedComponent);
