@@ -9,3 +9,5 @@ export const getCurrentOrgsSel = createSelector(
   [getAllOrgsSel, getOrgsOrder],
   (orgs, ids) => ids.map(id => orgs[id]),
 );
+
+export const isLoading = state => state[stateDomainName].loading;

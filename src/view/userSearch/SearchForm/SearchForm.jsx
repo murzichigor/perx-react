@@ -1,10 +1,12 @@
+import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { Button, Form, Input } from 'semantic-ui-react';
+import { withLoadingState } from '../../hocs';
 import UserSearchContext from '../UserSearchContext';
 
 const fieldName = 'user';
 
-const SearchForm = () => {
+const SearchForm = ({ loading = false }) => {
   const { setUserName } = useContext(UserSearchContext);
 
   const handleSubmit = (event) => {
@@ -24,9 +26,14 @@ const SearchForm = () => {
         width={6}
         placeholder="Type user name…"
         action={<Button type="submit">search</Button>}
+        loading={loading}
       />
     </Form>
   );
 };
 
-export default SearchForm;
+SearchForm.propTypes = {
+  loading: PropTypes.bool,
+};
+
+export default withLoadingState(SearchForm);

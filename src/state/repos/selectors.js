@@ -9,3 +9,5 @@ export const getCurrentReposSel = createSelector(
   [getAllReposSel, getReposOrder],
   (repos, ids) => ids.map(id => repos[id]),
 );
+
+export const isLoading = state => state[stateDomainName].loading;
