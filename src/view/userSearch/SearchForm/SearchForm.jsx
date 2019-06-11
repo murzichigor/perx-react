@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Button, Form, Input } from 'semantic-ui-react';
 import UserSearchContext from '../UserSearchContext';
 
 const fieldName = 'user';
@@ -14,10 +15,17 @@ const SearchForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="search" name={fieldName} placeholder="Type user name" />
-      <button type="submit">search</button>
-    </form>
+    <Form onSubmit={handleSubmit}>
+      <Input
+        icon="github"
+        iconPosition="left"
+        type="search"
+        name={fieldName}
+        width={6}
+        placeholder="Type user name…"
+        action={<Button type="submit">search</Button>}
+      />
+    </Form>
   );
 };
 
