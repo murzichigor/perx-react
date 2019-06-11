@@ -23,6 +23,6 @@ export const createFetchResorsesSaga = (apiHandler, { success, failure }) =>
 
       yield put(success(orgs, { nextPage: hasNextPage }));
     } catch (error) {
-      yield put(failure(error));
+      yield put(failure(error.message));
     }
   };

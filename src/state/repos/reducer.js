@@ -8,6 +8,7 @@ const initialState = {
   loading: false,
   error: null,
   nextPage: null,
+  loadingMore: false,
 };
 
 const reposReducer = (state = initialState, { type, payload, meta }) => {
@@ -16,6 +17,12 @@ const reposReducer = (state = initialState, { type, payload, meta }) => {
     return {
       ...state,
       loading: true,
+      error: null,
+    };
+  case types.REPOS_GET_MORE_REQUEST:
+    return {
+      ...state,
+      loadingMore: true,
       error: null,
     };
   case types.REPOS_GET_SUCCESS:
@@ -31,15 +38,13 @@ const reposReducer = (state = initialState, { type, payload, meta }) => {
     return {
       ...state,
       loading: false,
+      loadingMore: false,
       error: null,
       [mainCollectionName]: {
-        ...state,
+        ...state[mainCollectionName],
         ...payload,
       },
-      order: [
-        ...state,
-        ...Object.keys(payload),
-      ],
+      order: [...state.order, ...Object.keys(payload)],
       nextPage: meta.nextPage ? (state.nextPage || 1) + 1 : null,
     };
   case types.REPOS_GET_FAILURE:
@@ -47,6 +52,7 @@ const reposReducer = (state = initialState, { type, payload, meta }) => {
     return {
       ...state,
       loading: false,
+      loadingMore: false,
       error: payload,
     };
   default:

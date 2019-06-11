@@ -6,6 +6,7 @@ const initialState = {
   [mainCollectionName]: {},
   order: [],
   loading: false,
+  loadingMore: false,
   error: null,
   nextPage: null,
 };
@@ -18,6 +19,12 @@ const orgsReducer = (state = initialState, { type, payload, meta }) => {
       loading: true,
       error: null,
     };
+  case types.ORGS_GET_MORE_REQUEST:
+    return {
+      ...state,
+      loadingMore: true,
+      error: null,
+    };
   case types.ORGS_GET_SUCCESS:
     return {
       ...state,
@@ -27,10 +34,25 @@ const orgsReducer = (state = initialState, { type, payload, meta }) => {
       order: Object.keys(payload),
       nextPage: meta.nextPage ? (state.nextPage || 1) + 1 : null,
     };
-  case types.ORGS_GET_FAILURE:
+  case types.ORGS_GET_MORE_SUCCESS:
     return {
       ...state,
       loading: false,
+      loadingMore: false,
+      error: null,
+      [mainCollectionName]: {
+        ...state[mainCollectionName],
+        ...payload,
+      },
+      order: [...state.order, ...Object.keys(payload)],
+      nextPage: meta.nextPage ? (state.nextPage || 1) + 1 : null,
+    };
+  case types.ORGS_GET_FAILURE:
+  case types.ORGS_GET_MORE_FAILURE:
+    return {
+      ...state,
+      loading: false,
+      loadingMore: false,
       error: payload,
     };
   default:

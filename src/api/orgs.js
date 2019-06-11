@@ -1,5 +1,10 @@
 import api from './apiSetup';
 
-const fetchOrgs = userName => api.get(`users/${userName}/orgs`);
+const fetchOrgs = (userName, page) =>
+  api.get(`users/${userName}/orgs`, {
+    params: {
+      page,
+    },
+  });
 
 export default fetchOrgs;
