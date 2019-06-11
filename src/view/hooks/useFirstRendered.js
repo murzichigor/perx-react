@@ -6,7 +6,7 @@ const useFirstRendered = (...updatedValue) => {
     if (updatedValue[0].length > 0 || updatedValue[1]) {
       setAsDisplayed(true);
     }
-  }, [...updatedValue]);
+  }, [updatedValue]);
 
   return displayedOnce;
 };

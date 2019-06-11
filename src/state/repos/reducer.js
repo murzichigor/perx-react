@@ -27,7 +27,23 @@ const reposReducer = (state = initialState, { type, payload, meta }) => {
       order: Object.keys(payload),
       nextPage: meta.nextPage ? (state.nextPage || 1) + 1 : null,
     };
+  case types.REPOS_GET_MORE_SUCCESS:
+    return {
+      ...state,
+      loading: false,
+      error: null,
+      [mainCollectionName]: {
+        ...state,
+        ...payload,
+      },
+      order: [
+        ...state,
+        ...Object.keys(payload),
+      ],
+      nextPage: meta.nextPage ? (state.nextPage || 1) + 1 : null,
+    };
   case types.REPOS_GET_FAILURE:
+  case types.REPOS_GET_MORE_FAILURE:
     return {
       ...state,
       loading: false,

@@ -11,7 +11,7 @@ const OrgsItem = ({
   <List.Item className={styles.root}>
     <Image
       spaced
-      size="mini"
+      size="tiny"
       src={avatar}
     />
     <List.Content>

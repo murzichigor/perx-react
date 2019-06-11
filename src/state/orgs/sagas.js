@@ -24,4 +24,5 @@ function* fetchUserOrgsSagaWorker({ payload: userName }) {
 
 export default function* orgsWatcherSaga() {
   yield takeLatest(types.ORGS_GET_REQUEST, fetchUserOrgsSagaWorker);
+  yield takeLatest(types.ORGS_GET_MORE_REQUEST, fetchUserOrgsSagaWorker);
 }

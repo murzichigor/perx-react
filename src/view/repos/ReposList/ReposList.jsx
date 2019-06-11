@@ -4,6 +4,7 @@ import { List } from 'semantic-ui-react';
 import { reposSelectors } from '../../../state/repos';
 import { withLoadingState } from '../../hocs';
 import { useFirstRendered } from '../../hooks';
+import LoadMoreContainer from '../LoadMoreContainer';
 import PlaceholderItem from '../PlaceholderItem';
 import InitialItem from '../InitialItem';
 import ReposItem from '../ReposItem';
@@ -12,10 +13,7 @@ const ReposList = ({ repos = [], loading = false }) => {
   const displayedOnce = useFirstRendered(repos, loading);
 
   return (
-    <List
-      divided
-      relaxed
-    >
+    <List divided relaxed>
       {!displayedOnce && !loading && <InitialItem />}
 
       {loading && (
@@ -29,27 +27,33 @@ const ReposList = ({ repos = [], loading = false }) => {
         </>
       )}
 
-      {!loading && repos.map(repo => (
-        <ReposItem
-          key={repo.id}
-          url={repo.html_url}
-          name={repo.name}
-          description={repo.description}
-          stars={repo.stargazers_count}
-          watchers={repo.forks_count}
-          forks={repo.watchers_count}
-          language={repo.language}
-        />
-      ))}
+      {!loading && (
+        <>
+          {repos.map(repo => (
+            <ReposItem
+              key={repo.id}
+              url={repo.html_url}
+              name={repo.name}
+              description={repo.description}
+              stars={repo.stargazers_count}
+              watchers={repo.forks_count}
+              forks={repo.watchers_count}
+              language={repo.language}
+            />
+          ))}
+          <LoadMoreContainer />
+        </>
+      )}
 
       {!loading && displayedOnce && repos.length === 0 && (
         <List.Item>
           <List.Content>
-            <List.Description>User doesn't have any repository</List.Description>
+            <List.Description>
+              User doesn't have any repository
+            </List.Description>
           </List.Content>
         </List.Item>
       )}
-
     </List>
   );
 };

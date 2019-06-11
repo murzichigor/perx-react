@@ -1,7 +1,8 @@
 import { createSelector } from 'reselect';
 import { mainCollectionName, stateDomainName } from './vars';
 
-export const getAllOrgsSel = state => state[stateDomainName][mainCollectionName];
+export const getAllOrgsSel = state =>
+  state[stateDomainName][mainCollectionName];
 
 export const getOrgsOrder = state => state[stateDomainName].order;
 
@@ -11,3 +12,5 @@ export const getCurrentOrgsSel = createSelector(
 );
 
 export const isLoading = state => state[stateDomainName].loading;
+
+export const getNextPage = state => state[stateDomainName].nextPage;
