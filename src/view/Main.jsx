@@ -1,18 +1,41 @@
 import React from 'react';
-import Repos from './repos';
+import { Container, Divider, Grid, Header, Segment } from 'semantic-ui-react';
+import styles from './Main.module.css';
 import Orgs from './orgs';
+import Repos from './repos';
 import SearchForm, { SearchProvider } from './userSearch';
 
 const Main = () => (
-  <main>
-    <SearchProvider>
-      <SearchForm />
+  <SearchProvider>
+    <Container className={styles.root}>
+      <Segment as="main">
+        <Header as="h1">Search for GitHub user's repositories & organizations</Header>
+        <Divider hidden />
 
-      <Repos />
+        <SearchForm />
 
-      <Orgs />
-    </SearchProvider>
-  </main>
+        <Divider />
+        <Grid
+          divided
+          columns={2}
+          stackable
+        >
+          <Grid.Row>
+            <Grid.Column>
+
+              <Repos />
+
+            </Grid.Column>
+            <Grid.Column>
+
+              <Orgs />
+
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Segment>
+    </Container>
+  </SearchProvider>
 );
 
 export default Main;
