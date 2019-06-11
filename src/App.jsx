@@ -1,7 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import AppView from './view';
 import store from './state';
+import AppView from './view';
+import { withErrorBoundary } from './view/hocs';
 
 function App() {
   return (
@@ -11,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default withErrorBoundary(App);

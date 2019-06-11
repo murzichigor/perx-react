@@ -2,6 +2,9 @@
   "name": "perx-react",
   "version": "0.1.0",
   "private": true,
+  "bugs": {
+    "url": "https://github.com/murzichigor/perx-react/issues"
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
