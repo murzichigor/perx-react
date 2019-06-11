@@ -1,3 +1,3 @@
-import ReposList from './OrgsList';
+import OrgsList from './OrgsList';
 
-export default ReposList;
+export default OrgsList;

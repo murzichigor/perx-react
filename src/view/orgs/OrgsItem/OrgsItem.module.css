@@ -1,4 +1,4 @@
-.item {
+.root {
   /* added !important to overwrite list-item display */
   display: flex !important;
   align-items: flex-start;
