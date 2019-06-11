@@ -28,6 +28,7 @@ const SearchForm = ({ loading = false }) => {
         placeholder="Type user name…"
         action={<Button type="submit">search</Button>}
         loading={loading}
+        aria-label="Search by username"
       />
     </Form>
   );

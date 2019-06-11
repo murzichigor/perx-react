@@ -9,7 +9,7 @@ const Main = () => (
   <SearchProvider>
     <Container className={styles.root}>
       <Segment as="main">
-        <Header as="h1">Search for GitHub user's repositories & organizations</Header>
+        <Header as="h1">GitHub users explorer</Header>
         <Divider hidden />
 
         <SearchForm />
