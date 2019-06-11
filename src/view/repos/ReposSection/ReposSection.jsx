@@ -1,9 +1,10 @@
 import React from 'react';
+import { Header } from 'semantic-ui-react';
 import ReposContainer from '../ReposContainer';
 
 const ReposSection = () => (
   <section>
-    <h2>Repos</h2>
+    <Header as="h2">Repositories</Header>
     <ReposContainer />
   </section>
 );

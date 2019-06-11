@@ -1,14 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { List, Label, Icon } from 'semantic-ui-react';
+import styles from './ReposList.module.css';
 
 const ReposList = ({ repos = [] }) => (
-  <ul>
+  <List
+    divided
+    relaxed
+  >
     {repos.map(repo => (
-      <li key={repo.id}>
-        <a href={repo.html_url}>{repo.name}</a>
-      </li>
+      <List.Item key={repo.id}>
+        <List.Content>
+          <List.Header
+            as="a"
+            href={repo.html_url}
+          >
+            {repo.name}
+          </List.Header>
+          <List.Description>
+            {repo.description}
+          </List.Description>
+
+          <Label.Group size="small" className={styles.tags}>
+            <Label>
+              <Icon name="star" />
+              {repo.stargazers_count || 0}
+            </Label>
+            <Label>
+              <Icon name="fork" />
+              {repo.forks_count || 0}
+            </Label>
+            <Label>
+              <Icon name="eye" />
+              {repo.watchers_count || 0}
+            </Label>
+            {repo.language
+            && <Label>{repo.language}</Label>
+            }
+          </Label.Group>
+        </List.Content>
+      </List.Item>
     ))}
-  </ul>
+  </List>
 );
 
 ReposList.propTypes = {

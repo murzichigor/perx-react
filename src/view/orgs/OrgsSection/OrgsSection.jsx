@@ -1,9 +1,10 @@
 import React from 'react';
+import { Header } from 'semantic-ui-react';
 import OrgsContainer from '../OrgsContainer';
 
 const OrgsSection = () => (
   <section>
-    <h2>Orgs</h2>
+    <Header as="h2">Organizations</Header>
     <OrgsContainer />
   </section>
 );
