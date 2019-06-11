@@ -31,6 +31,7 @@ const withErrorBoundary = WrappedComponent =>
                 <a href={ISSUES_URL}>our issue tracker</a>
                 {' '}
                 to find the solution of this
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 error or create new issue and we'll fix it as soon as possible. We promise.
               </Header.Subheader>
 

@@ -43,6 +43,7 @@ const OrgsList = ({ orgs = [], loading = false }) => {
       {!loading && displayedOnce && orgs.length === 0 && (
         <List.Item>
           <List.Content>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <List.Description>User doesn't have any organization</List.Description>
           </List.Content>
         </List.Item>

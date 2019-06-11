@@ -49,6 +49,7 @@ const ReposList = ({ repos = [], loading = false }) => {
         <List.Item>
           <List.Content>
             <List.Description>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               User doesn't have any repository
             </List.Description>
           </List.Content>
