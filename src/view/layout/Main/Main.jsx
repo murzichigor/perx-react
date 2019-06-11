@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Divider, Grid, Header, Segment } from 'semantic-ui-react';
 import styles from './Main.module.css';
-import Orgs from './orgs';
-import Repos from './repos';
-import SearchForm, { SearchProvider } from './userSearch';
+import Orgs from '../../orgs';
+import Repos from '../../repos';
+import SearchForm, { SearchProvider } from '../../userSearch';
 
 const Main = () => (
   <SearchProvider>

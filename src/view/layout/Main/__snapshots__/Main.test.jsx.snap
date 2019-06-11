@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ui container root"
+  >
+    <main
+      class="ui segment"
+    >
+      <h1
+        class="ui header"
+      >
+        GitHub users explorer
+      </h1>
+      <div
+        class="ui hidden divider"
+      />
+      <form>
+        <div
+          class="ui action left icon input"
+          width="6"
+        >
+          <input
+            aria-label="Search by username"
+            name="user"
+            placeholder="Type user name…"
+            type="search"
+          />
+          <i
+            aria-hidden="true"
+            class="github icon"
+          />
+          <button
+            class="ui button"
+            type="submit"
+          >
+            search
+          </button>
+        </div>
+      </form>
+      <div
+        class="ui divider"
+      />
+      <div
+        class="ui stackable divided two column grid"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="column"
+          >
+            <section>
+              <h2
+                class="ui header"
+              >
+                Repositories
+              </h2>
+              <div
+                class="ui divided relaxed list"
+                role="list"
+              >
+                <div
+                  class="item"
+                  role="listitem"
+                >
+                  <div
+                    class="content"
+                  >
+                    <div
+                      class="header"
+                    >
+                      Enter user name to search for his repositories
+                    </div>
+                    <div
+                      class="description"
+                    >
+                      There should be a list of all his repositories with public access.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div
+            class="column"
+          >
+            <section>
+              <h2
+                class="ui header"
+              >
+                Organizations
+              </h2>
+              <div
+                class="ui divided relaxed list"
+                role="list"
+              >
+                <div
+                  class="item"
+                  role="listitem"
+                  style="display: flex; align-items: flex-start;"
+                >
+                  <div
+                    class="ui placeholder"
+                    style="height: 32px; width: 32px; margin-right: 1rem;"
+                  >
+                    <div
+                      class="image"
+                    />
+                  </div>
+                  <div
+                    class="content"
+                  >
+                    <div
+                      class="header"
+                    >
+                      Enter user name to search for organizations
+                    </div>
+                    <div
+                      class="description"
+                    >
+                      There should be a list of all his organizations with public access.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</DocumentFragment>
+`;
