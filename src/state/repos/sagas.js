@@ -2,14 +2,14 @@ import { takeLatest } from 'redux-saga/effects';
 import { fetchRepos } from '../../api';
 import * as actions from './actions';
 import * as types from './types';
-import { createFetchResorsesSaga } from '../utils';
+import { createFetchResourcesSaga } from '../utils';
 
-const fetchUserReposSagaWorker = createFetchResorsesSaga(fetchRepos, {
+const fetchUserReposSagaWorker = createFetchResourcesSaga(fetchRepos, {
   success: actions.fetchReposSuccess,
   failure: actions.fetchReposFailure,
 });
 
-const fetchMoreReposSagaWorker = createFetchResorsesSaga(fetchRepos, {
+const fetchMoreReposSagaWorker = createFetchResourcesSaga(fetchRepos, {
   success: actions.fetchMoreReposSuccess,
   failure: actions.fetchMoreReposFailure,
 });

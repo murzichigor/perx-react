@@ -3,7 +3,7 @@ import parseLinkHeader from 'parse-link-header';
 import { call, put } from 'redux-saga/effects';
 
 // eslint-disable-next-line import/prefer-default-export
-export const createFetchResorsesSaga = (apiHandler, { success, failure }) =>
+export const createFetchResourcesSaga = (apiHandler, { success, failure }) =>
   function* fetchResoursesSagaWorker({ payload: userName, meta: { page } = {} }) {
     try {
       const {
