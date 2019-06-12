@@ -14,7 +14,8 @@ Each component has its own directory with main js file, styles & tests.
 
 ## Environment variables
 
-Environment variables hoisted from _.env_ with prefix `REACT_APP_*` & then configured in **config.js**
+Environment variables hoisted from _.env_ with prefix `REACT_APP_*` & then configured in **config.js**.
+As example you can use `.env.example`.
 
 ## Scripts
 
