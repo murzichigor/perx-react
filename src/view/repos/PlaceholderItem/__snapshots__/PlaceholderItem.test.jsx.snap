@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlaceholderItem should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ui placeholder"
+  >
+    <div
+      class="header"
+    >
+      <div
+        class="line short"
+      />
+    </div>
+    <div
+      class="paragraph"
+    >
+      <div
+        class="line full"
+      />
+      <div
+        class="line short"
+      />
+    </div>
+    <div
+      class="paragraph"
+    >
+      <div
+        class="line medium"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

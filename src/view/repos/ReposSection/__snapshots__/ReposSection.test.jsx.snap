@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReposSection should match snapshot 1`] = `
+<DocumentFragment>
+  <section>
+    <h2
+      class="ui header"
+    >
+      Repositories
+    </h2>
+    <div
+      class="ui divided relaxed list"
+      role="list"
+    >
+      <div
+        class="item"
+        role="listitem"
+      >
+        <div
+          class="content"
+        >
+          <div
+            class="header"
+          >
+            Enter user name to search for his repositories
+          </div>
+          <div
+            class="description"
+          >
+            There should be a list of all his repositories with public access.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

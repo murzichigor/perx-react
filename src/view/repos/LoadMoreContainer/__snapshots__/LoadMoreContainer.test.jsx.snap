@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadMoreContainer Repos should match snapshot with default props 1`] = `<DocumentFragment />`;
+
+exports[`LoadMoreContainer Repos should match snapshot with loading state 1`] = `
+<DocumentFragment>
+  <button
+    class="ui fluid loading disabled button"
+    disabled=""
+    tabindex="-1"
+  >
+    load more
+  </button>
+</DocumentFragment>
+`;
+
+exports[`LoadMoreContainer Repos should match snapshot with store data 1`] = `
+<DocumentFragment>
+  <button
+    class="ui fluid button"
+  >
+    load more
+  </button>
+</DocumentFragment>
+`;

@@ -1,0 +1,272 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReposList should match snapshot after first update 1`] = `
+<DocumentFragment>
+  <div
+    class="ui divided relaxed list"
+    role="list"
+  >
+    <div
+      class="item"
+      role="listitem"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="description"
+        >
+          User doesn't have any repository
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ReposList should match snapshot after first update 2`] = `
+<DocumentFragment>
+  <div
+    class="ui divided relaxed list"
+    role="list"
+  >
+    <div
+      class="item"
+      role="listitem"
+    >
+      <div
+        class="ui placeholder"
+      >
+        <div
+          class="header"
+        >
+          <div
+            class="line short"
+          />
+        </div>
+        <div
+          class="paragraph"
+        >
+          <div
+            class="line full"
+          />
+          <div
+            class="line short"
+          />
+        </div>
+        <div
+          class="paragraph"
+        >
+          <div
+            class="line medium"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="item"
+      role="listitem"
+    >
+      <div
+        class="ui placeholder"
+      >
+        <div
+          class="header"
+        >
+          <div
+            class="line short"
+          />
+        </div>
+        <div
+          class="paragraph"
+        >
+          <div
+            class="line full"
+          />
+          <div
+            class="line short"
+          />
+        </div>
+        <div
+          class="paragraph"
+        >
+          <div
+            class="line medium"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ReposList should match snapshot when default 1`] = `
+<DocumentFragment>
+  <div
+    class="ui divided relaxed list"
+    role="list"
+  >
+    <div
+      class="item"
+      role="listitem"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="header"
+        >
+          Enter user name to search for his repositories
+        </div>
+        <div
+          class="description"
+        >
+          There should be a list of all his repositories with public access.
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ReposList should match snapshot with placeholder 1`] = `
+<DocumentFragment>
+  <div
+    class="ui divided relaxed list"
+    role="list"
+  >
+    <div
+      class="item"
+      role="listitem"
+    >
+      <div
+        class="ui placeholder"
+      >
+        <div
+          class="header"
+        >
+          <div
+            class="line short"
+          />
+        </div>
+        <div
+          class="paragraph"
+        >
+          <div
+            class="line full"
+          />
+          <div
+            class="line short"
+          />
+        </div>
+        <div
+          class="paragraph"
+        >
+          <div
+            class="line medium"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="item"
+      role="listitem"
+    >
+      <div
+        class="ui placeholder"
+      >
+        <div
+          class="header"
+        >
+          <div
+            class="line short"
+          />
+        </div>
+        <div
+          class="paragraph"
+        >
+          <div
+            class="line full"
+          />
+          <div
+            class="line short"
+          />
+        </div>
+        <div
+          class="paragraph"
+        >
+          <div
+            class="line medium"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ReposList should match snapshot with props 1`] = `
+<DocumentFragment>
+  <div
+    class="ui divided relaxed list"
+    role="list"
+  >
+    <div
+      class="item"
+      role="listitem"
+    >
+      <div
+        class="content"
+      >
+        <a
+          class="header"
+          href="https://github.com/gaearon/6to5"
+        >
+          6to5
+        </a>
+        <div
+          class="description"
+        >
+          Turn ES6+ code into readable vanilla ES5 with source maps and more!
+        </div>
+        <div
+          class="ui small labels tags"
+        >
+          <div
+            class="ui label"
+          >
+            <i
+              aria-hidden="true"
+              class="star icon"
+            />
+            1
+          </div>
+          <div
+            class="ui label"
+          >
+            <i
+              aria-hidden="true"
+              class="fork icon"
+            />
+            1
+          </div>
+          <div
+            class="ui label"
+          >
+            <i
+              aria-hidden="true"
+              class="eye icon"
+            />
+            1
+          </div>
+          <div
+            class="ui label"
+          >
+            JavaScript
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

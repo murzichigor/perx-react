@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReposItem should match snapshot without props 1`] = `
+<DocumentFragment>
+  <div
+    class="item"
+    role="listitem"
+  >
+    <div
+      class="content"
+    >
+      <a
+        class="header"
+      />
+      <div
+        class="description"
+      />
+      <div
+        class="ui small labels tags"
+      >
+        <div
+          class="ui label"
+        >
+          <i
+            aria-hidden="true"
+            class="star icon"
+          />
+          0
+        </div>
+        <div
+          class="ui label"
+        >
+          <i
+            aria-hidden="true"
+            class="fork icon"
+          />
+          0
+        </div>
+        <div
+          class="ui label"
+        >
+          <i
+            aria-hidden="true"
+            class="eye icon"
+          />
+          0
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ReposItem should match snapshot without props 2`] = `
+<DocumentFragment>
+  <div
+    class="item"
+    role="listitem"
+  >
+    <div
+      class="content"
+    >
+      <a
+        class="header"
+        href="testUrl"
+      >
+        testName
+      </a>
+      <div
+        class="description"
+      >
+        testDescription
+      </div>
+      <div
+        class="ui small labels tags"
+      >
+        <div
+          class="ui label"
+        >
+          <i
+            aria-hidden="true"
+            class="star icon"
+          />
+          42
+        </div>
+        <div
+          class="ui label"
+        >
+          <i
+            aria-hidden="true"
+            class="fork icon"
+          />
+          8
+        </div>
+        <div
+          class="ui label"
+        >
+          <i
+            aria-hidden="true"
+            class="eye icon"
+          />
+          13
+        </div>
+        <div
+          class="ui label"
+        >
+          testLanguage
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

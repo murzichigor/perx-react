@@ -4,9 +4,9 @@ import { List } from 'semantic-ui-react';
 import { reposSelectors } from '../../../state/repos';
 import { withLoadingState } from '../../hocs';
 import { useFirstRendered } from '../../hooks';
+import InitialItem from '../InitialItem';
 import LoadMoreContainer from '../LoadMoreContainer';
 import PlaceholderItem from '../PlaceholderItem';
-import InitialItem from '../InitialItem';
 import ReposItem from '../ReposItem';
 
 const ReposList = ({ repos = [], loading = false }) => {
@@ -73,5 +73,7 @@ ReposList.propTypes = {
     }),
   ).isRequired,
 };
+
+export const InnerComponent = ReposList;
 
 export default withLoadingState(reposSelectors.isLoading)(ReposList);

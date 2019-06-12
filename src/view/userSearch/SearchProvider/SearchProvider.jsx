@@ -10,7 +10,11 @@ const SearchProvider = ({ children }) => {
     setUserName,
   };
 
-  return <UserSearchContext.Provider value={context}>{children}</UserSearchContext.Provider>;
+  return (
+    <UserSearchContext.Provider value={context}>
+      {children}
+    </UserSearchContext.Provider>
+  );
 };
 
 SearchProvider.propTypes = {

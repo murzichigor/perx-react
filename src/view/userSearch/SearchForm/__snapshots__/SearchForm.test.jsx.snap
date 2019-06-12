@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm should match snapshot with error 1`] = `
+<DocumentFragment>
+  <form>
+    <div
+      class="ui error action left icon input"
+      width="6"
+    >
+      <input
+        aria-label="Search by username"
+        name="user"
+        placeholder="Type user name…"
+        type="search"
+      />
+      <i
+        aria-hidden="true"
+        class="github icon"
+      />
+      <button
+        class="ui button"
+        type="submit"
+      >
+        search
+      </button>
+    </div>
+    <div
+      class="ui warning message"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="header"
+        >
+          testMessage
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`SearchForm should match snapshot without props 1`] = `
+<DocumentFragment>
+  <form>
+    <div
+      class="ui action left icon input"
+      width="6"
+    >
+      <input
+        aria-label="Search by username"
+        name="user"
+        placeholder="Type user name…"
+        type="search"
+      />
+      <i
+        aria-hidden="true"
+        class="github icon"
+      />
+      <button
+        class="ui button"
+        type="submit"
+      >
+        search
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
